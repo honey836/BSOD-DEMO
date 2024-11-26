@@ -1,0 +1,55 @@
+<!-- bsod.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake BSOD</title>
+    <style>
+        /* Fullscreen blue background */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #0000AA; /* Classic blue screen color */
+            color: white;
+            font-family: Consolas, monaco, monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: none; /* Hide the cursor */
+            user-select: none; /* Disable text selection */
+        }
+        #bsod {
+            text-align: left;
+            max-width: 800px;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        .blink {
+            animation: blink-animation 1s steps(2, start) infinite;
+        }
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="bsod">
+        <p>A problem has been detected and Windows has been shut down to prevent damage to your computer.</p>
+        <p>If this is the first time you've seen this Stop error screen, restart your computer. If this screen appears again, follow these steps:</p>
+        <p>Check to make sure any new hardware or software is properly installed. If this is a new installation, ask your hardware or software manufacturer for any Windows updates you might need.</p>
+        <p>If problems continue, disable or remove any newly installed hardware or software. Disable BIOS memory options such as caching or shadowing. If you need to use Safe Mode to remove or disable components, restart your computer, press F8 to select Advanced Startup Options, and then select Safe Mode.</p>
+        <p>Technical Information:</p>
+        <p>*** STOP: 0x0000007B (0xF78D2524, 0xC0000034, 0x00000000, 0x00000000)</p>
+        <p class="blink">Collecting data for crash dump ...</p>
+        <p>Beginning dump of physical memory.</p>
+        <p>Physical memory dump complete.</p>
+        <p>Contact your system administrator or technical support group for further assistance.</p>
+    </div>
+</body>
+</html>
